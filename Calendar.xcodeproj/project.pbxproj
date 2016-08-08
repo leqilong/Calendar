@@ -13,8 +13,16 @@
 		10523B291D5208B100499FD8 /* CodeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10523B281D5208B100499FD8 /* CodeCellView.swift */; };
 		10523B2B1D534C9E00499FD8 /* PlansTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10523B2A1D534C9E00499FD8 /* PlansTableViewCell.swift */; };
 		10523B2D1D534EEE00499FD8 /* hot-chocolate-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = 10523B2C1D534EEE00499FD8 /* hot-chocolate-xxl.png */; };
+		10523B2F1D55632500499FD8 /* InputPlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10523B2E1D55632500499FD8 /* InputPlansViewController.swift */; };
+		10523B321D556AD100499FD8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10523B301D556AD100499FD8 /* Model.xcdatamodeld */; };
+		10523B391D55759E00499FD8 /* Date+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10523B371D55759E00499FD8 /* Date+CoreDataProperties.swift */; };
+		10523B3D1D5575A500499FD8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10523B3B1D5575A500499FD8 /* Date.swift */; };
+		10523B401D5576EC00499FD8 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10523B3F1D5576EC00499FD8 /* CoreDataStack.swift */; };
+		10523B421D55C38100499FD8 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10523B411D55C38100499FD8 /* UIViewControllerExtension.swift */; };
 		1052ECAA1D51E86300B8D003 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1052ECA91D51E86300B8D003 /* CalendarViewController.swift */; };
 		10586E1D27A9273A9C02C7B2 /* Pods_Calendar_CalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB2D4FC314EABD6D241EB64 /* Pods_Calendar_CalendarTests.framework */; };
+		106E55041D574A1800F94DA1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106E55031D574A1800F94DA1 /* Activity.swift */; };
+		106E55061D574A1D00F94DA1 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106E55051D574A1D00F94DA1 /* Activity+CoreDataProperties.swift */; };
 		10A0DE5F1D500A860054E4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A0DE5E1D500A860054E4F2 /* AppDelegate.swift */; };
 		10A0DE641D500A860054E4F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A0DE621D500A860054E4F2 /* Main.storyboard */; };
 		10A0DE661D500A860054E4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A0DE651D500A860054E4F2 /* Assets.xcassets */; };
@@ -55,7 +63,16 @@
 		10523B281D5208B100499FD8 /* CodeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeCellView.swift; sourceTree = "<group>"; };
 		10523B2A1D534C9E00499FD8 /* PlansTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlansTableViewCell.swift; sourceTree = "<group>"; };
 		10523B2C1D534EEE00499FD8 /* hot-chocolate-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot-chocolate-xxl.png"; sourceTree = "<group>"; };
+		10523B2E1D55632500499FD8 /* InputPlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPlansViewController.swift; sourceTree = "<group>"; };
+		10523B311D556AD100499FD8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		10523B371D55759E00499FD8 /* Date+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		10523B3B1D5575A500499FD8 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		10523B3F1D5576EC00499FD8 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		10523B411D55C38100499FD8 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1052ECA91D51E86300B8D003 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		106E55021D5749EB00F94DA1 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		106E55031D574A1800F94DA1 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		106E55051D574A1D00F94DA1 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		10A0DE5B1D500A860054E4F2 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A0DE5E1D500A860054E4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A0DE631D500A860054E4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,12 +153,54 @@
 		104A3D2D1D51F1F4001ADA5A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				106E55051D574A1D00F94DA1 /* Activity+CoreDataProperties.swift */,
+				10523B371D55759E00499FD8 /* Date+CoreDataProperties.swift */,
+				10523B411D55C38100499FD8 /* UIViewControllerExtension.swift */,
+				10A0DE5E1D500A860054E4F2 /* AppDelegate.swift */,
 				10A0DE651D500A860054E4F2 /* Assets.xcassets */,
 				10523B2C1D534EEE00499FD8 /* hot-chocolate-xxl.png */,
 				10A0DE671D500A860054E4F2 /* LaunchScreen.storyboard */,
 				10A0DE6A1D500A860054E4F2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10523B331D556ADB00499FD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10523B341D556AE600499FD8 /* Core Data */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		10523B341D556AE600499FD8 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				10523B3F1D5576EC00499FD8 /* CoreDataStack.swift */,
+				106E55031D574A1800F94DA1 /* Activity.swift */,
+				10523B3B1D5575A500499FD8 /* Date.swift */,
+				10523B301D556AD100499FD8 /* Model.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		10523B351D556AF300499FD8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1052ECA91D51E86300B8D003 /* CalendarViewController.swift */,
+				10523B2E1D55632500499FD8 /* InputPlansViewController.swift */,
+				10523B2A1D534C9E00499FD8 /* PlansTableViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		10523B361D556B1500499FD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10523B261D51F6D300499FD8 /* AnimationClass.swift */,
+				104A3D2C1D51F1E5001ADA5A /* Cell */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		10A0DE521D500A850054E4F2 = {
@@ -169,12 +228,10 @@
 		10A0DE5D1D500A860054E4F2 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				1052ECA91D51E86300B8D003 /* CalendarViewController.swift */,
-				10A0DE5E1D500A860054E4F2 /* AppDelegate.swift */,
-				10523B261D51F6D300499FD8 /* AnimationClass.swift */,
 				10A0DE621D500A860054E4F2 /* Main.storyboard */,
-				10523B2A1D534C9E00499FD8 /* PlansTableViewCell.swift */,
-				104A3D2C1D51F1E5001ADA5A /* Cell */,
+				10523B361D556B1500499FD8 /* Views */,
+				10523B351D556AF300499FD8 /* Controllers */,
+				10523B331D556ADB00499FD8 /* Model */,
 				104A3D2D1D51F1F4001ADA5A /* Supporting Files */,
 			);
 			path = Calendar;
@@ -479,11 +536,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106E55061D574A1D00F94DA1 /* Activity+CoreDataProperties.swift in Sources */,
+				10523B2F1D55632500499FD8 /* InputPlansViewController.swift in Sources */,
 				1052ECAA1D51E86300B8D003 /* CalendarViewController.swift in Sources */,
+				10523B391D55759E00499FD8 /* Date+CoreDataProperties.swift in Sources */,
 				10523B271D51F6D300499FD8 /* AnimationClass.swift in Sources */,
+				10523B321D556AD100499FD8 /* Model.xcdatamodeld in Sources */,
+				10523B401D5576EC00499FD8 /* CoreDataStack.swift in Sources */,
 				10523B2B1D534C9E00499FD8 /* PlansTableViewCell.swift in Sources */,
 				10523B291D5208B100499FD8 /* CodeCellView.swift in Sources */,
+				10523B3D1D5575A500499FD8 /* Date.swift in Sources */,
 				10A0DE5F1D500A860054E4F2 /* AppDelegate.swift in Sources */,
+				10523B421D55C38100499FD8 /* UIViewControllerExtension.swift in Sources */,
+				106E55041D574A1800F94DA1 /* Activity.swift in Sources */,
 				10523B231D51F4BA00499FD8 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -738,6 +803,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		10523B301D556AD100499FD8 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				106E55021D5749EB00F94DA1 /* Model 2.xcdatamodel */,
+				10523B311D556AD100499FD8 /* Model.xcdatamodel */,
+			);
+			currentVersion = 106E55021D5749EB00F94DA1 /* Model 2.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 10A0DE531D500A860054E4F2 /* Project object */;
 }

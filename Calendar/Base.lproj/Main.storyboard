@@ -105,17 +105,21 @@
                                 <state key="normal" image="PlusIcon">
                                     <color key="titleColor" red="0.2470588235" green="0.29411764709999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="inputPlans:" destination="GjD-wG-SH2" eventType="touchUpInside" id="ljC-va-ten"/>
+                                    <segue destination="sGT-8F-ElE" kind="presentation" identifier="showInput" id="lkS-zg-vq4"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q4d-pN-RVH">
                                 <rect key="frame" x="0.0" y="402" width="600" height="198"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="planCell" rowHeight="98" id="bHw-2o-nuE" customClass="PlansTableViewCell" customModule="Calendar" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="planCell" rowHeight="98" id="bHw-2o-nuE" customClass="PlansTableViewCell" customModule="Calendar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bHw-2o-nuE" id="74d-8T-7oO">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="98"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="97.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dLt-JJ-QEs">
@@ -197,6 +201,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="addPlansButton" destination="5W4-qF-Xxr" id="5E7-XP-NMp"/>
                         <outlet property="calendarView" destination="PxD-ku-wt9" id="Dn4-iK-F7P"/>
                         <outlet property="monthLabel" destination="8Eh-at-NzJ" id="JLP-l3-fu9"/>
                         <outlet property="plansTableView" destination="q4d-pN-RVH" id="0CX-Ay-4KQ"/>
@@ -206,6 +211,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbD-Cx-VgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="378"/>
+        </scene>
+        <!--Input Plans View Controller-->
+        <scene sceneID="JUO-88-vpc">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="sGT-8F-ElE" customClass="InputPlansViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="exF-gO-9hY"/>
+                        <viewControllerLayoutGuide type="bottom" id="HG4-j1-fNy"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" alpha="0.75" contentMode="scaleToFill" id="CrB-ie-eWU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o0p-ax-SQT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MEO-UC-3rx">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FU3-SW-Uix">
+                                        <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCW-cJ-2wI">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                            </pickerView>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="q3d-OM-gEs">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="200"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="492135006.76566601">
+                                                    <!--2016-08-06 00:10:06 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kg3-xH-GQi">
+                                        <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzl-97-0yz">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancel:" destination="sGT-8F-ElE" eventType="touchUpInside" id="XYd-IW-cQj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcL-i2-0Pk">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="200"/>
+                                                <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="done:" destination="sGT-8F-ElE" eventType="touchUpInside" id="vjn-OP-pJb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o0p-ax-SQT" firstAttribute="top" secondItem="CrB-ie-eWU" secondAttribute="top" id="GO8-Mr-S7T"/>
+                            <constraint firstItem="o0p-ax-SQT" firstAttribute="bottom" secondItem="HG4-j1-fNy" secondAttribute="top" id="KKI-vk-5QC"/>
+                            <constraint firstItem="o0p-ax-SQT" firstAttribute="leading" secondItem="CrB-ie-eWU" secondAttribute="leading" id="L86-nO-xoS"/>
+                            <constraint firstAttribute="trailing" secondItem="o0p-ax-SQT" secondAttribute="trailing" id="SMW-6D-6WL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="qzl-97-0yz" id="dHe-jH-ldt"/>
+                        <outlet property="categoryPickerView" destination="NCW-cJ-2wI" id="1pe-HQ-eD3"/>
+                        <outlet property="datePickerView" destination="q3d-OM-gEs" id="6ad-VG-9DL"/>
+                        <outlet property="doneButton" destination="QcL-i2-0Pk" id="xSf-g2-3j0"/>
+                        <outlet property="plansTextField" destination="MEO-UC-3rx" id="sk6-SK-W93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fqh-AK-kau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="378"/>
         </scene>
     </scenes>
     <resources>
