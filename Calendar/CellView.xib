@@ -11,6 +11,10 @@
             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2m-Vr-cqf" userLabel="activity View" customClass="AnimationView" customModule="Calendar" customModuleProvider="target">
+                    <rect key="frame" x="25" y="25" width="10" height="10"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7s-kf-Ug1" customClass="AnimationView" customModule="Calendar" customModuleProvider="target">
                     <rect key="frame" x="6" y="6" width="23" height="23"/>
                     <color key="backgroundColor" red="0.94561606645584106" green="0.99783474206924438" blue="0.93303447961807251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -18,7 +22,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-9i-qd9">
                     <rect key="frame" x="6" y="9" width="23" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -33,6 +37,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="activityView" destination="E2m-Vr-cqf" id="JjW-hk-DdB"/>
                 <outlet property="dayLabel" destination="A3M-9i-qd9" id="drv-7L-6hf"/>
                 <outlet property="selectedView" destination="s7s-kf-Ug1" id="2Uj-gl-Feq"/>
             </connections>

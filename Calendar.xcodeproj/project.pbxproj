@@ -23,6 +23,10 @@
 		10586E1D27A9273A9C02C7B2 /* Pods_Calendar_CalendarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB2D4FC314EABD6D241EB64 /* Pods_Calendar_CalendarTests.framework */; };
 		106E55041D574A1800F94DA1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106E55031D574A1800F94DA1 /* Activity.swift */; };
 		106E55061D574A1D00F94DA1 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106E55051D574A1D00F94DA1 /* Activity+CoreDataProperties.swift */; };
+		106E55081D5874A800F94DA1 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 106E55071D5874A800F94DA1 /* food.png */; };
+		106E550A1D5874B100F94DA1 /* travel.png in Resources */ = {isa = PBXBuildFile; fileRef = 106E55091D5874B100F94DA1 /* travel.png */; };
+		106E550C1D5874BE00F94DA1 /* vacation.png in Resources */ = {isa = PBXBuildFile; fileRef = 106E550B1D5874BE00F94DA1 /* vacation.png */; };
+		106E55121D587C0E00F94DA1 /* briefcase.png in Resources */ = {isa = PBXBuildFile; fileRef = 106E55111D587C0E00F94DA1 /* briefcase.png */; };
 		10A0DE5F1D500A860054E4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A0DE5E1D500A860054E4F2 /* AppDelegate.swift */; };
 		10A0DE641D500A860054E4F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A0DE621D500A860054E4F2 /* Main.storyboard */; };
 		10A0DE661D500A860054E4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A0DE651D500A860054E4F2 /* Assets.xcassets */; };
@@ -73,6 +77,10 @@
 		106E55021D5749EB00F94DA1 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		106E55031D574A1800F94DA1 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		106E55051D574A1D00F94DA1 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		106E55071D5874A800F94DA1 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		106E55091D5874B100F94DA1 /* travel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = travel.png; sourceTree = "<group>"; };
+		106E550B1D5874BE00F94DA1 /* vacation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vacation.png; sourceTree = "<group>"; };
+		106E55111D587C0E00F94DA1 /* briefcase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = briefcase.png; sourceTree = "<group>"; };
 		10A0DE5B1D500A860054E4F2 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A0DE5E1D500A860054E4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A0DE631D500A860054E4F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +166,10 @@
 				10523B411D55C38100499FD8 /* UIViewControllerExtension.swift */,
 				10A0DE5E1D500A860054E4F2 /* AppDelegate.swift */,
 				10A0DE651D500A860054E4F2 /* Assets.xcassets */,
+				106E55111D587C0E00F94DA1 /* briefcase.png */,
+				106E55091D5874B100F94DA1 /* travel.png */,
+				106E550B1D5874BE00F94DA1 /* vacation.png */,
+				106E55071D5874A800F94DA1 /* food.png */,
 				10523B2C1D534EEE00499FD8 /* hot-chocolate-xxl.png */,
 				10A0DE671D500A860054E4F2 /* LaunchScreen.storyboard */,
 				10A0DE6A1D500A860054E4F2 /* Info.plist */,
@@ -386,9 +398,13 @@
 			files = (
 				104A3D2B1D51F1DE001ADA5A /* CellView.xib in Resources */,
 				10A0DE691D500A860054E4F2 /* LaunchScreen.storyboard in Resources */,
+				106E55121D587C0E00F94DA1 /* briefcase.png in Resources */,
 				10A0DE661D500A860054E4F2 /* Assets.xcassets in Resources */,
 				10A0DE641D500A860054E4F2 /* Main.storyboard in Resources */,
+				106E550C1D5874BE00F94DA1 /* vacation.png in Resources */,
+				106E550A1D5874B100F94DA1 /* travel.png in Resources */,
 				10523B2D1D534EEE00499FD8 /* hot-chocolate-xxl.png in Resources */,
+				106E55081D5874A800F94DA1 /* food.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

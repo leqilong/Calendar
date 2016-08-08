@@ -30,6 +30,15 @@ class InputPlansViewController: UIViewController, UITextFieldDelegate, UIPickerV
     var currentDate: Date?
     var selectedDate: NSDate?
     var delegate: InputPlansViewControllerDelegate?
+    var imageStrings = [
+        "briefcase.png",
+        "travel.png",
+        "vacation.png",
+        "food.png",
+        "hot-chocolate-xxl.png"
+    ]
+    
+    var selectedCategoryIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +74,9 @@ class InputPlansViewController: UIViewController, UITextFieldDelegate, UIPickerV
             activity.date = currentDate
             activity.selectedDate = selectedDate
             print("activity.selectedDate in InputPlansViewControlleris \(activity.selectedDate)!!!")
+            if let selectedCategoryIndex = selectedCategoryIndex{
+                activity.category = imageStrings[selectedCategoryIndex]
+            }
             do{
                try context.save()
             }catch{}
@@ -83,12 +95,52 @@ class InputPlansViewController: UIViewController, UITextFieldDelegate, UIPickerV
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 4
+        return 5
     }
     
-//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        <#code#>
-//    }
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 60
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        var componentView = UIView(frame: CGRectMake(0, 0, pickerView.bounds.width - 30, 60))
+        var componentImageView = UIImageView(frame: CGRectMake(0, 0, 50, 50))
+        
+        var rowString = String()
+        switch row{
+        case 0:
+            rowString = "Work"
+            componentImageView.image = UIImage(named: imageStrings[0])
+        case 1:
+            rowString = "Travel"
+            componentImageView.image = UIImage(named: imageStrings[1])
+        case 2:
+            rowString = "Vacation"
+            componentImageView.image = UIImage(named: imageStrings[2])
+        case 3:
+            rowString = "Food"
+            componentImageView.image = UIImage(named: imageStrings[3])
+        case 4:
+            rowString = "Relax"
+            componentImageView.image = UIImage(named: imageStrings[4])
+        default:
+            break
+        }
+        
+        let label = UILabel(frame: CGRectMake(60, 0, pickerView.bounds.width - 90, 60 ))
+        label.text = rowString
+        
+        componentView.addSubview(label)
+        componentView.addSubview(componentImageView)
+        
+        return componentView
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedCategoryIndex = row
+        print("selectedCategoryIndex is now \(selectedCategoryIndex)!!!")
+    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()

@@ -136,6 +136,9 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     
+    func loadActivityViews(){
+        
+    }
     @IBAction func inputPlans(sender: AnyObject) {
         performSegueWithIdentifier("showInput", sender: self)
     }
@@ -338,6 +341,9 @@ extension CalendarViewController{
         let strTime = formatter.stringFromDate(activity.time!)
         cell.planLabel.text = activity.detail
         cell.timeLabel.text = strTime
+        if let imageString = activity.category{
+            cell.planIconImageView.image = UIImage(named: imageString)
+        }
         
         
         return cell

@@ -220,15 +220,17 @@
                         <viewControllerLayoutGuide type="top" id="exF-gO-9hY"/>
                         <viewControllerLayoutGuide type="bottom" id="HG4-j1-fNy"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" alpha="0.75" contentMode="scaleToFill" id="CrB-ie-eWU">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="CrB-ie-eWU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="o0p-ax-SQT">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MEO-UC-3rx">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="I plan to..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MEO-UC-3rx">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.29411764709999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.94561606645584106" green="0.99783474206924438" blue="0.93303447961807251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -240,6 +242,7 @@
                                             </pickerView>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="q3d-OM-gEs">
                                                 <rect key="frame" x="300" y="0.0" width="300" height="200"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="492135006.76566601">
                                                     <!--2016-08-06 00:10:06 +0000-->
                                                 </date>
@@ -251,14 +254,23 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzl-97-0yz">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
-                                                <state key="normal" title="Cancel"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="0.2470588235" green="0.29411764709999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="cancel:" destination="sGT-8F-ElE" eventType="touchUpInside" id="XYd-IW-cQj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcL-i2-0Pk">
                                                 <rect key="frame" x="300" y="0.0" width="300" height="200"/>
-                                                <state key="normal" title="Done"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" red="0.2470588235" green="0.29411764709999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="done:" destination="sGT-8F-ElE" eventType="touchUpInside" id="vjn-OP-pJb"/>
                                                 </connections>
@@ -268,7 +280,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.84313725490000002" green="1" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="o0p-ax-SQT" firstAttribute="top" secondItem="CrB-ie-eWU" secondAttribute="top" id="GO8-Mr-S7T"/>
                             <constraint firstItem="o0p-ax-SQT" firstAttribute="bottom" secondItem="HG4-j1-fNy" secondAttribute="top" id="KKI-vk-5QC"/>
