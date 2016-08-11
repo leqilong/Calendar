@@ -36,20 +36,6 @@ class CalendarViewController: UIViewController, UITableViewDelegate, UITableView
     
     let formatter = NSDateFormatter()
     let testCalendar: NSCalendar! = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-//    
-//    lazy var fetchedResultsController: NSFetchedResultsController = {
-//        let fr = NSFetchRequest(entityName: "Activity")
-//        fr.sortDescriptors = [NSSortDescriptor(key: "time", ascending: true)]
-//        //print("selectedDate isn't nil anymore!")
-//        //print("selectedDate in fetchedResultsController is \(currentDate)")
-//        fr.predicate = NSPredicate(format: "selectedDate == %@", self.selectedDate)
-//        //print("fr.predicate is \(fr.predicate)!")
-//        print("selectedDate in fetchedResultsController is \(self.selectedDate)")
-//        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fr, managedObjectContext: self.context, sectionNameKeyPath: nil, cacheName: nil)
-//        fetchedResultsController.delegate = self
-//        return fetchedResultsController
-//    }()
-
 
     
     override func viewDidLoad() {
@@ -197,20 +183,6 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
     
     func calendar(calendar: JTAppleCalendarView, didSelectDate date: NSDate, cell: JTAppleDayCellView?, cellState: CellState) {
         (cell as? CellView)?.cellSelectionChanged(cellState)
-        
-        print("didSelectDate called!")
-        
-//        if let fetchedResults = fetchedResultsController.fetchedObjects{
-//            for result in fetchedResults{
-//                let activity = result as! Activity
-//                context.deleteObject(activity)
-//                
-//            }
-//            
-//            do{
-//                try self.context.save()
-//            }catch{}
-//        }
 
         
         let fr = NSFetchRequest(entityName: "Date")
@@ -289,30 +261,12 @@ extension CalendarViewController: JTAppleCalendarViewDataSource, JTAppleCalendar
     }
     
     func calendar(calendar: JTAppleCalendarView, isAboutToDisplaySectionHeader header: JTAppleHeaderView, date: (startDate: NSDate, endDate: NSDate), identifier: String) {
-//        switch identifier {
-//        case "WhiteSectionHeaderView":
-//            let headerCell = (header as? WhiteSectionHeaderView)
-//            headerCell?.title.text = "Design multiple headers"
-//        default:
-//            let headerCell = (header as? PinkSectionHeaderView)
-//            headerCell?.title.text = "In any color or size you want"
-//        }
     }
 }
 
 extension CalendarViewController{
     //MARK: UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if let sections = fetchedResultsController.sections{
-//            let section = sections[section]
-//            print("We have \(section.numberOfObjects) objects in 1 section")
-//            if section.numberOfObjects != 0{
-//                plansTableView.hidden = false 
-//            }
-//            return section.numberOfObjects
-//        }else{
-//            return 0
-//        }
         
         return activities.count
     }
@@ -324,17 +278,6 @@ extension CalendarViewController{
         let cell = tableView.dequeueReusableCellWithIdentifier("planCell", forIndexPath: indexPath) as! PlansTableViewCell
         
         cell.backgroundColor = UIColor(hue: 0.4417, saturation: 0.32, brightness: 0.68, alpha: 1.0)
-        
-//        let activity = fetchedResultsController.objectAtIndexPath(indexPath) as! Activity
-//        
-//        formatter.timeStyle = .ShortStyle
-//        
-//        let strTime = formatter.stringFromDate(activity.time!)
-//
-//        
-//        cell.planLabel.text = activity.detail
-//        print("cell.planLabel.text is \(cell.planLabel.text)!!!!")
-//        cell.timeLabel.text = strTime
         
         let activity = activities[indexPath.row]
         formatter.timeStyle = .ShortStyle
@@ -348,60 +291,6 @@ extension CalendarViewController{
         
         return cell
     }
-//    
-//    
-//    //MARK: NSFetchedResultsControllerDelegate Methods
-//    func controllerWillChangeContent(controller: NSFetchedResultsController) {
-//        plansTableView.beginUpdates()
-//    }
-//    
-//    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
-//        
-//        let set = NSIndexSet(index: sectionIndex)
-//        
-//        switch(type){
-//        case .Insert:
-//            self.plansTableView.insertSections(set, withRowAnimation: .Fade)
-//        case .Delete:
-//            self.plansTableView.deleteSections(set, withRowAnimation: .Fade)
-//        default:
-//            break
-//        }
-//    }
-//    
-//    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-//        
-//        switch (type) {
-//        case .Update:
-//            //print("Update object: \(newIndexPath)")
-//            self.plansTableView.reloadRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
-//        case .Insert:
-//            //print("Insert object : \(newIndexPath)")
-//            self.plansTableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
-//        case .Delete:
-//            //print("Delete object: \(newIndexPath)")
-//            self.plansTableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
-//        case .Move:
-//            self.plansTableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
-//            self.plansTableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
-//        }
-//    }
-//    
-//    func controllerDidChangeContent(controller: NSFetchedResultsController) {
-//        plansTableView.reloadData()
-//        plansTableView.endUpdates()
-//    }
-//    
-    
-//    func executeSearch(){
-//        do{
-//            try fetchedResultsController.performFetch()
-//            plansTableView.reloadData()
-//        }catch let e as NSError{
-//            print("Error while trying to perform a search: \n\(e)\n\(fetchedResultsController)")
-//        }
-//        
-//    }
 
 }
 
